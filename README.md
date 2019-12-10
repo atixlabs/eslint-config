@@ -72,9 +72,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Eslint](https://eslint.org/) - Linter Used 
-* [Prettier](https://prettier.io/) - For some presets related to our formatting rules 
-* [Formidable Labs presets](https://github.com/FormidableLabs/eslint-config-formidable) - Used as a base for our config 
+* [Eslint](https://eslint.org/) - Linter Used.
+* [Prettier](https://prettier.io/) - For some presets related to our formatting rules.
+* [Formidable Labs presets](https://github.com/FormidableLabs/eslint-config-formidable) - Used as a base for our config.
+* [Eslint Plugin Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) - With useful eslint rules.
+* [SonarJS](https://github.com/SonarSource/eslint-plugin-sonarjs) - To detect bugs and suspicious patterns in the code.
 
 ## Contributing
 
@@ -88,7 +90,5 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Formidable Labs for an awesome set of presets we used as a base for this config.
 

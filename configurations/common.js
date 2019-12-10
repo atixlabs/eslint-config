@@ -1,5 +1,6 @@
 module.exports = {
-  plugins: ['prettier'],
+  plugins: ['prettier', 'sonarjs'],
+  extends: ['plugin:sonarjs/recommended', 'plugin:unicorn/recommended'],
   rules: {
     'prettier/prettier': 'error',
     strict: 'off',
