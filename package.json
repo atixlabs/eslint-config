@@ -1,0 +1,37 @@
+{
+  "name": "@atixlabs/eslint-config",
+  "version": "0.0.1",
+  "description": "AtixLabs eslint rules for NodeJs, React and Solidity",
+  "bin": {
+    "atixlabs-eslint-config-install-deps": "./install-deps.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/atixlabs/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "linter"
+  ],
+  "author": "AtixLabs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/atixlabs/eslint-config/issues"
+  },
+  "homepage": "https://gitlab.com/atixlabs/eslint-config#readme",
+  "dependencies": {
+    "babel-eslint": "10.0.3",
+    "begoo": "1.1.2",
+    "eslint": "6.7.2",
+    "eslint-config-formidable": "4.0.0",
+    "inquirer": "7.0.0",
+    "npm-programmatic": "git+https://github.com/atixlabs/npm-programmatic.git#d9f3a1bb3e8c2508875e08d72c659e9cb806b37b",
+    "ora": "4.0.3"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
+  }
+}
