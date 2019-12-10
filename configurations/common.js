@@ -18,6 +18,7 @@ module.exports = {
     'require-jsdoc': 'off',
     'operator-linebreak': 'off',
     'max-params': ['error', 5],
-    'object-property-newline': 'off'
+    'object-property-newline': 'off',
+    'filenames/match-regex': 'off' // As this rule is already defined by unicorn/filename-case
   }
 };
