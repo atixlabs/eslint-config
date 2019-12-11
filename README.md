@@ -1,6 +1,6 @@
 # AtixLabs Eslint Config 
 
-This repository contains predefined (an opinionated) rules for AtixLabs eslint projects. Here you will be able to find presets for NodeJs, ReactJS and Solidity.
+This repository contains predefined (an opinionated) rules for AtixLabs eslint projects. Here you will be able to find presets for NodeJs and ReactJS (and obviously Javascript).
 
 All the presets are based on other excellent projects with some minor tweaks to fit our needs. All our presets are defined using [Eslint Shareable Configs](https://eslint.org/docs/developer-guide/shareable-configs)
 
@@ -42,15 +42,6 @@ Depending on the project you are running you will need to specify which rules yo
 ```
 {
   "extends": "@atixlabs/eslint-config/configurations/react"
-}
-
-```
-
-- Solidity
-
-```
-{
-  "extends": "@atixlabs/eslint-config/configurations/solidity"
 }
 
 ```

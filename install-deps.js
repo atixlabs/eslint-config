@@ -10,9 +10,8 @@ const reactDeps = require('./dependencies/reactjs-deps');
 
 const NODEJS = 'NodeJS';
 const REACT = 'React';
-const SOLIDITY = 'Solidity';
 
-const PLATFORMS = [NODEJS, REACT, SOLIDITY];
+const PLATFORMS = [NODEJS, REACT];
 
 const getPlatforms = () => {
   return inquirer.prompt([
@@ -60,8 +59,6 @@ const getPlatformDeps = platform => {
       return jsCommonDeps;
     case REACT:
       return jsCommonDeps.concat(reactDeps);
-    case SOLIDITY:
-      return;
   }
 };
 
@@ -73,7 +70,6 @@ const doRun = async () => {
     deps = deps.concat(getPlatformDeps(platform));
   }
   deps = [...new Set(deps)]; // avoid duplicates
-  console.log(deps)
   await installDeps(deps);
 };
 

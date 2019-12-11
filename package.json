@@ -1,7 +1,7 @@
 {
   "name": "@atixlabs/eslint-config",
   "version": "0.0.1",
-  "description": "AtixLabs eslint rules for NodeJs, React and Solidity",
+  "description": "AtixLabs eslint rules for Node & ReactJS",
   "bin": {
     "atixlabs-eslint-config-install-deps": "./install-deps.js"
   },
