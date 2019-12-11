@@ -5,7 +5,7 @@ const inquirer = require('inquirer');
 const ora = require('ora');
 const begoo = require('begoo');
 
-const commonDeps = require('./dependencies/common-deps');
+const jsCommonDeps = require('./dependencies/js-common-deps');
 const reactDeps = require('./dependencies/reactjs-deps');
 
 const NODEJS = 'NodeJS';
@@ -14,7 +14,7 @@ const SOLIDITY = 'Solidity';
 
 const PLATFORMS = [NODEJS, REACT, SOLIDITY];
 
-const getInstallType = () => {
+const getPlatforms = () => {
   return inquirer.prompt([
     {
       type: 'checkbox',
@@ -42,47 +42,44 @@ const withSpinner = async (msg, fn) => {
   }
 };
 
-const installDeps = async (deps, notify) => {
-  for (let dep of deps) {
-    notify(`Installing ${dep}`);
-    await npm.install(dep, {
-      cwd: '.',
-      saveDev: true,
-      saveExact: true
-    });
-  }
-};
+const installDeps = deps =>
+  withSpinner('Installing deps', async notify => {
+    for (let dep of deps) {
+      notify(`Installing ${dep}`);
+      await npm.install(dep, {
+        cwd: '.',
+        saveDev: true,
+        saveExact: true
+      });
+    }
+  });
 
-const installCommonDeps = () =>
-  withSpinner('Installing common deps', notify =>
-    installDeps(commonDeps, notify)
-  );
-
-const installPlatformDeps = platform => {
+const getPlatformDeps = platform => {
   switch (platform) {
     case NODEJS:
-      return;
+      return jsCommonDeps;
     case REACT:
-      return withSpinner('Installing React deps', notify =>
-        installDeps(reactDeps, notify)
-      );
+      return jsCommonDeps.concat(reactDeps);
     case SOLIDITY:
       return;
   }
 };
 
 const doRun = async () => {
-  const { platforms } = await getInstallType();
-  await installCommonDeps();
+  const { platforms } = await getPlatforms();
 
+  let deps = [];
   for (let platform of platforms.values()) {
-    await installPlatformDeps(platform);
+    deps = deps.concat(getPlatformDeps(platform));
   }
+  deps = [...new Set(deps)]; // avoid duplicates
+  console.log(deps)
+  await installDeps(deps);
 };
 
-const everyingSetUp = () =>
+const everythingSetUpMsg = () =>
   console.log(begoo('Everything Ready! Happy Coding!'));
 
 doRun()
-  .then(everyingSetUp)
+  .then(everythingSetUpMsg)
   .catch(console.error);
