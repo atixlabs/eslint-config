@@ -4,6 +4,8 @@ This repository contains predefined (an opinionated) rules for AtixLabs eslint p
 
 All the presets are based on other excellent projects with some minor tweaks to fit our needs. All our presets are defined using [Eslint Shareable Configs](https://eslint.org/docs/developer-guide/shareable-configs)
 
+[![asciicast](https://asciinema.org/a/klJicE8qn68kSsb8C6olqumkf.svg)](https://asciinema.org/a/klJicE8qn68kSsb8C6olqumkf)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
