@@ -26,13 +26,19 @@
   "dependencies": {
     "babel-eslint": "10.0.3",
     "begoo": "1.1.2",
-    "eslint": "6.7.2",
     "eslint-config-formidable": "4.0.0",
     "inquirer": "7.0.0",
     "npm-programmatic": "git+https://github.com/atixlabs/npm-programmatic.git#d9f3a1bb3e8c2508875e08d72c659e9cb806b37b",
     "ora": "4.0.3"
   },
   "devDependencies": {
+    "eslint": "6.7.2",
+    "eslint-plugin-filenames": "1.3.2",
+    "eslint-plugin-import": "2.19.1",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-sonarjs": "0.5.0",
+    "eslint-plugin-unicorn": "14.0.1",
     "prettier": "1.19.1"
   }
 }

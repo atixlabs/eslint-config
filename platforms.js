@@ -17,6 +17,6 @@ platformsConfigs[REACT] = {
 };
 
 module.exports = {
-  PLATFORMS, 
+  PLATFORMS,
   platformsConfigs
-}
+};
