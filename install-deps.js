@@ -4,16 +4,11 @@ const npm = require('npm-programmatic');
 const inquirer = require('inquirer');
 const ora = require('ora');
 const begoo = require('begoo');
+const fs = require('fs');
 
-const jsCommonDeps = require('./dependencies/js-common-deps');
-const reactDeps = require('./dependencies/reactjs-deps');
+const { PLATFORMS, platformsConfigs } = require('./platforms');
 
-const NODEJS = 'NodeJS';
-const REACT = 'React';
-
-const PLATFORMS = [NODEJS, REACT];
-
-const getPlatforms = () => {
+const askUserForConfigs = () => {
   return inquirer.prompt([
     {
       type: 'checkbox',
@@ -26,6 +21,12 @@ const getPlatforms = () => {
         }
         return true;
       }
+    },
+    {
+      type: 'confirm',
+      message: 'Do you want me to create .eslintrc file for you?',
+      name: 'createEslintrc',
+      default: true
     }
   ]);
 };
@@ -53,17 +54,26 @@ const installDeps = deps =>
     }
   });
 
-const getPlatformDeps = platform => {
-  switch (platform) {
-    case NODEJS:
-      return jsCommonDeps;
-    case REACT:
-      return jsCommonDeps.concat(reactDeps);
-  }
-};
+const getPlatformDeps = platform => platformsConfigs[platform].deps;
+
+const writeEslintrc = platforms =>
+  withSpinner(
+    `Creating .eslintrc file for ${platforms.join(', ')}`,
+    async () => {
+      const eslintrcExtends = platforms.reduce(
+        (acc, platform) => acc.concat(platformsConfigs[platform].eslintrc),
+        []
+      );
+
+      fs.writeFileSync(
+        '.eslintrc',
+        JSON.stringify({ extends: eslintrcExtends }, null, 2)
+      );
+    }
+  );
 
 const doRun = async () => {
-  const { platforms } = await getPlatforms();
+  const { platforms, createEslintrc } = await askUserForConfigs();
 
   let deps = [];
   for (let platform of platforms.values()) {
@@ -71,6 +81,10 @@ const doRun = async () => {
   }
   deps = [...new Set(deps)]; // avoid duplicates
   await installDeps(deps);
+
+  if (createEslintrc) {
+    await writeEslintrc(platforms);
+  }
 };
 
 const everythingSetUpMsg = () =>
