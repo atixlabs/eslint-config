@@ -1,3 +1,13 @@
+## [1.0.1](https://gitlab.com/atixlabs/eslint-config/compare/1.0.0...1.0.1) (2019-12-12)
+
+### Bug Fixes
+
+* after a refactor, common config was left with wrong filename beaking eslint execution ([7dbeda4](https://gitlab.com/atixlabs/eslint-config/commit/7dbeda4))
+
+### Features
+
+* install-deps allows to create `.eslintrc` file based on the selected platforms ([043831a](https://gitlab.com/atixlabs/eslint-config/commit/043831a))
+
 ## 1.0.0 (2019-12-11)
 
 ### Features
