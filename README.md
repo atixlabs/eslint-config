@@ -57,6 +57,11 @@ If your project contains multiple technologies, you can compose the configs, for
 }
 
 ```
+
+### Customization
+
+- If you want to override any rule you an still do it by adding them in your project `.eslintrc` config file as you would normaly do.
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
