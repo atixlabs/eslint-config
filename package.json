@@ -29,7 +29,7 @@
     "begoo": "1.1.2",
     "eslint-config-formidable": "4.0.0",
     "inquirer": "7.0.0",
-    "npm-programmatic": "git+https://github.com/atixlabs/npm-programmatic.git#d9f3a1bb3e8c2508875e08d72c659e9cb806b37b",
+    "npm-programmatic": "git+https://github.com/atixlabs/npm-programmatic.git#63d5c0d18e83c960922ad8bb5c04bdd52ee40144",
     "ora": "4.0.3"
   },
   "devDependencies": {
