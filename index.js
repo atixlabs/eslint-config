@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const fs = require('fs');
 const npm = require('npm-programmatic');
 const inquirer = require('inquirer');
