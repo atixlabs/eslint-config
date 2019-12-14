@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://gitlab.com/atixlabs/eslint-config/compare/v1.1.0...v1.1.1) (2019-12-14)
+
+
+### Bug Fixes
+
+* after adding tests the index.js file was missing the execution flag ([157ce52](https://gitlab.com/atixlabs/eslint-config/commit/157ce52a320e2e1f5342416670d898fabec7f351))
+
 ## 1.1.0 [1.1.0](https://gitlab.com/atixlabs/eslint-config/compare/1.0.1...1.1.0) (2019-12-14)
 
 
