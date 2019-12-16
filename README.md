@@ -14,10 +14,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-In order to setup the eslint rules in your project, you need to install our rules presets: 
+In order to setup the eslint rules in your project you need to use `NodeJs v12+`. Also you need to install our rules presets: 
 
 ```
-npm install -E @atixlabs/eslint-rules
+npm install -E @atixlabs/eslint-config
 ```
 
 Once you have installed the package, there is a helper script that will help installing the required dependencies based on the projec type you are trying to configure. To do so, invoke it using:
