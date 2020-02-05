@@ -1,6 +1,6 @@
 {
   "name": "@atixlabs/eslint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "AtixLabs eslint rules for Node & ReactJS",
   "bin": {
     "atixlabs-eslint-config-install-deps": "./index.js"
