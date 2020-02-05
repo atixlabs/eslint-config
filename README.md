@@ -66,9 +66,13 @@ If your project contains multiple technologies, you can compose the configs, for
 
 - If you want to override any rule you an still do it by adding them in your project `.eslintrc` config file as you would normaly do.
 
+## How to test?
+
+// TODO
+
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This package is published to npm registry under @atixlabs organization.
 
 ## Built With
 
