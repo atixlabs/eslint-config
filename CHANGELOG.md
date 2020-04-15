@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://gitlab.com/atixlabs-oss/eslint-config/compare/v1.2.1...v1.2.2) (2020-04-15)
+
+
+### Bug Fixes
+
+* fixed repository url as it was broken ([eb88821](https://gitlab.com/atixlabs-oss/eslint-config/commit/eb88821db258e534139090d3f3c9a7693ee6ca7d))
+
 ### [1.2.1](https://github.com/atixlabs/eslint-cofnig/compare/v1.2.0...v1.2.1) (2020-04-15)
 
 ## [1.2.0](https://github.com/atixlabs/eslint-cofnig/compare/v1.1.2...v1.2.0) (2020-02-05)
