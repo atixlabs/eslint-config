@@ -21,9 +21,9 @@
   "author": "AtixLabs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/atixlabs/eslint-config/issues"
+    "url": "https://gitlab.com/atixlabs-oss/eslint-config/issues"
   },
-  "homepage": "https://github.com/atixlabs/eslint-config#readme",
+  "homepage": "https://gitlab.com/atixlabs-oss/eslint-config#readme",
   "dependencies": {
     "babel-eslint": "10.0.3",
     "begoo": "1.1.2",
